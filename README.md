@@ -42,8 +42,8 @@ reported total earnings from work which are lower than what they'd earn with
 the Federal minimum wage.
 
 There are 173 majors (FO1P) in total in the ACS, but I dropped majors which had 
-too few people. Refer to `./src/R/process_ipums.R` to see how I implemented 
-these exclusions and decisions.
+too few people (fewer than 30). Refer to `./src/R/process_ipums.R` to see how I 
+implemented these exclusions and decisions.
 
 ## Results
 
@@ -53,6 +53,17 @@ in `./data/processed/`. Explore them and
 anyone with questions and/or feedback.
 
 ![Median Full-time Earnings by Major](/graphics/bar_med_ftyr_earn.png)
+
+# To Do
+
+* Consider expanding the definition of "full-time, year round" workers to 
+include those who report fewer than 50 weeks of work, but who work 35+ hours per
+week and have been employed at least 6 months.
+
+* Consider excluding, from the visualizations, majors which have fewer than 100
+respondents, instead of 30. HUD sets this cutoff for their SAFMR data.
+
+* Look at home ownership rates.
 
 ## License
 

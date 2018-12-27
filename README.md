@@ -32,7 +32,18 @@ levels of each variable for the less popular majors. E.g., Petroleum Engineering
 
 ## Data
 
-The base dataset consists of 2,589,149 rows. I got this by excluding (From the raw PUMS dataset) non-civilians, those younger than 22, those without at least a bachelor's degree, and those for which no information on college major was reported. I then aggregated this individual-level dataset into major-level datasets. There are 173 majors (FO1P) in total, but I dropped majors which had too few people. Refer to `process_pums.R` and `compile_data.R` to see all of the exclusions and decisions I made while processing this data.
+Following Casselman, I consider someone employed "full-time, year round" if they
+reported working at least 50 weeks in the last 12 months, and at least 35
+"usual" hours of work. Someone is considered a "recent graduate" if they have a
+Bachelor's degree and aged 27 or below. 
+
+I exclude individuals who reported working full-time, but
+reported total earnings from work which are lower than what they'd earn with
+the Federal minimum wage.
+
+There are 173 majors (FO1P) in total in the ACS, but I dropped majors which had 
+too few people. Refer to `./src/R/process_ipums.R` to see how I implemented 
+these exclusions and decisions.
 
 ## Results
 

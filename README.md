@@ -9,20 +9,19 @@ Micro Use Samples
 obtained via [IPUMS](https://usa.ipums.org/usa/). 
 This project was inspired by a 2014 FiveThirtyEight 
 [article](https://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/) 
-by @BenCasselman). Casselman used the 
-2010-12 3-year PUMS, covering a period when the US economy was still meekly 
+by [Ben Casselman](https://github.com/BenCasselman), who used the 2010-12 3-year 
+PUMS, covering a period when the US economy was still meekly 
 recovering from the Great Recession. This data can be accessed via the 
 [`fivethirtyeight` package](https://github.com/fivethirtyeight/data/tree/master/college-majors). 
 The current project uses more recent data spanning the succeeding period of 
-stronger economic expansion.
+stronger economic expansion; also, it has pretty pictures.
 
 **Note:** This is purely a descriptive exercise. No one should infer causality 
 from these results. Rather, use them to get a general sense of student outcomes 
 after graduation. The Handbook of the Economics of Education has an 
 [excellent, exhaustive chapter](https://www.sciencedirect.com/science/article/pii/B9780444634597000075) 
 summarizing the research on the causal effect of college major on labor market 
-outcomes (
-[earlier draft freely available via NBER](www.amaurel.net/IMG/pdf/w21655.pdf)).
+outcomes ( [earlier draft freely available via NBER](www.amaurel.net/IMG/pdf/w21655.pdf)).
 
 Also, be aware that many majors don't have enough observations for one to be 
 very confident in their estimates of earnings, unemployment, etc. Again, you 
@@ -56,7 +55,7 @@ much more. Here is their full citation:
 
 >Steven Ruggles, Sarah Flood, Ronald Goeken, Josiah Grover, Erin Meyer, Jose Pacas, and Matthew Sobek. IPUMS USA: Version 8.0 [dataset]. Minneapolis, MN: IPUMS, 2018. https://doi.org/10.18128/D010.V8.0
 
-This wouldn't have been possible for me without @BenCasselman's 
+This wouldn't have been possible for me without Ben Casselman's 
 [code](https://github.com/fivethirtyeight/data/blob/master/college-majors/college-majors-rscript.R). 
 Reading and modifying it taught me R for the first time. Please check out his
 work.
@@ -75,6 +74,6 @@ I work in a crowded space. Here are other people and orgs doing similar work on 
 
 ## Further Reading
 
-* *[The Analysis of Field Choice in College and Graduate School: Determinants and Wage Effects](https://docs.google.com/viewer?url=http%3A%2F%2Fwww.amaurel.net%2FIMG%2Fpdf%2Fw21655.pdf&pdf=true)* (2015) by Altonji et al. NBER.
+* *[The Analysis of Field Choice in College and Graduate School: Determinants and Wage Effects](https://www.sciencedirect.com/science/article/pii/B9780444634597000075)* (2015) by Altonji et al. NBER. Access working paper version for free [here](www.amaurel.net/IMG/pdf/w21655.pdf).
 
 * *[The Economic Guide to Picking a College Major](https://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/)* (2014) by Ben Casselman. FiveThirtyEight.

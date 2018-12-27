@@ -20,9 +20,10 @@ The base dataset consists of 2,589,149 rows. I got this by excluding (From the r
 
 ![Median Full-time Earnings by Major](/graphics/bar_med_ftyr_earn.png)
 
-## Unlicense
+## License
 
-Public domain. Feel free to use my code for whatever. The data provided is publicly available. Some data I used cannot be provided.
+Licensed under the General Public License version 3.0 (GPLv3.0). Some data I 
+used cannot be provided.
 
 ## Links
 

@@ -9,10 +9,7 @@ Micro Use Samples
 obtained via [IPUMS](https://usa.ipums.org/usa/). 
 This project was inspired by a 2014 FiveThirtyEight 
 [article](https://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/) 
-by [Ben Casselman](https://github.com/BenCasselman). This wouldn't have been 
-possible for me without his 
-[code](https://github.com/fivethirtyeight/data/blob/master/college-majors/college-majors-rscript.R). 
-Reading and modifying it taught me R for the first time. Casselman used the 
+by @BenCasselman). Casselman used the 
 2010-12 3-year PUMS, covering a period when the US economy was still meekly 
 recovering from the Great Recession. This data can be accessed via the 
 [`fivethirtyeight` package](https://github.com/fivethirtyeight/data/tree/master/college-majors). 
@@ -52,12 +49,17 @@ anyone with questions and/or feedback.
 Licensed under the General Public License version 3.0 (GPLv3.0). Some data I 
 used cannot be provided.
 
-## Extra Thanks to IPUMS
+## Extra Thanks
 
 IPUMS took the ACS data, cleaned it, recoded it, extensively documented it, and
 much more. Here is their full citation:
 
-Steven Ruggles, Sarah Flood, Ronald Goeken, Josiah Grover, Erin Meyer, Jose Pacas, and Matthew Sobek. IPUMS USA: Version 8.0 [dataset]. Minneapolis, MN: IPUMS, 2018. https://doi.org/10.18128/D010.V8.0
+>Steven Ruggles, Sarah Flood, Ronald Goeken, Josiah Grover, Erin Meyer, Jose Pacas, and Matthew Sobek. IPUMS USA: Version 8.0 [dataset]. Minneapolis, MN: IPUMS, 2018. https://doi.org/10.18128/D010.V8.0
+
+This wouldn't have been possible for me without @BenCasselman's 
+[code](https://github.com/fivethirtyeight/data/blob/master/college-majors/college-majors-rscript.R). 
+Reading and modifying it taught me R for the first time. Please check out his
+work.
 
 ## Links
 

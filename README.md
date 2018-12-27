@@ -2,15 +2,37 @@
 
 ## About
 
-I visualize earnings, employment, and demographic info for all college majors in the US, using the 2012-16 American Community Survey 5-year Public Micro Use Sample [(PUMS)](https://www.census.gov/programs-surveys/acs/technical-documentation/pums/documentation.html). This project was inspired by a 2014 FiveThirtyEight [article](https://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/) by [Ben Casselman](https://github.com/BenCasselman). This wouldn't have been possible for me without his [code](https://github.com/fivethirtyeight/data/blob/master/college-majors/college-majors-rscript.R).
+I visualize earnings, employment, and demographic info for all college majors in 
+the US, using the 2015, 2016, and 2017 American Community Survey 1-year Public 
+Micro Use Samples 
+[(PUMS)](https://www.census.gov/programs-surveys/acs/technical-documentation/pums/documentation.html), 
+obtained via [IPUMS](https://usa.ipums.org/usa/). 
+This project was inspired by a 2014 FiveThirtyEight 
+[article](https://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/) 
+by [Ben Casselman](https://github.com/BenCasselman). This wouldn't have been 
+possible for me without his 
+[code](https://github.com/fivethirtyeight/data/blob/master/college-majors/college-majors-rscript.R). 
+Reading and modifying it taught me R for the first time. Casselman used the 
+2010-12 3-year PUMS, covering a period when the US economy was still meekly 
+recovering from the Great Recession. This data can be accessed via the 
+[`fivethirtyeight` package](https://github.com/fivethirtyeight/data/tree/master/college-majors). 
+The current project uses more recent data spanning the succeeding period of 
+stronger economic expansion.
 
-The datasets I used are available above. Explore them and tell the world what you find. My email (everet [dot] rummel [at] gmail [dot] com) and [Twitter](https://twitter.com/TheRealEveret) DMs are open to questions and feedback.
+**Note:** This is purely a descriptive exercise. No one should infer causality 
+from these results. Rather, use them to get a general sense of student outcomes 
+after graduation. The Handbook of the Economics of Education has an 
+[excellent, exhaustive chapter](https://www.sciencedirect.com/science/article/pii/B9780444634597000075) 
+summarizing the research on the causal effect of college major on labor market 
+outcomes (
+[earlier draft freely available via NBER](www.amaurel.net/IMG/pdf/w21655.pdf)).
 
-This is purely a descriptive exercise. No one should infer causality from these results. Rather, use them to get a general sense of student outcomes after graduation. The Handbook of the Economics of Education has an [excellent, exhaustive chapter](https://www.sciencedirect.com/science/article/pii/B9780444634597000075) summarizing the research on the causal effect of college major on labor market outcomes ([earlier draft freely available via NBER](www.amaurel.net/IMG/pdf/w21655.pdf)).
-
-Also, be aware that many majors don't have enough observations for one to be very confident in their estimates of earnings, unemployment, etc. Again, you should use these visuals to get a general sense of how majors compare (Library Science probably still earns less than Civil Engineering, on average, despite the uncertainty in the estimates) but don't get too caught up on the exact levels of each variable for the less popular majors. E.g., Petroleum Engineering has gigantic median earnings but very few people major in it.
-
-An earlier iteration of this project used [data from 2010-12](https://github.com/erummel/visual-majors#the-visual-guide-to-choosing-a-college-major-2010-2012)--as did Casselman--when the US economy was still meekly recovering from the Great Recession. This data can be accessed via the `fivethirtyeight` [package](https://github.com/fivethirtyeight/data/tree/master/college-majors). The current project uses more recent data and a larger sample size spanning the succeeding period of stronger economic expansion.
+Also, be aware that many majors don't have enough observations for one to be 
+very confident in their estimates of earnings, unemployment, etc. Again, you 
+should use these visuals to get a general sense of how majors compare (Library 
+Science probably still earns less than Civil Engineering, on average, despite 
+the uncertainty in the estimates) but don't get too caught up on the exact 
+levels of each variable for the less popular majors. E.g., Petroleum Engineering has gigantic median earnings but very few people major in it.
 
 ## Data
 
@@ -18,12 +40,24 @@ The base dataset consists of 2,589,149 rows. I got this by excluding (From the r
 
 ## Results
 
+The processed datasets I used to make the following visualizations are available 
+in `./data/processed/`. Explore them and 
+[tell me](https://twitter.com/TheRealEveret) what you find. My inbox is open to
+anyone with questions and/or feedback.
+
 ![Median Full-time Earnings by Major](/graphics/bar_med_ftyr_earn.png)
 
 ## License
 
 Licensed under the General Public License version 3.0 (GPLv3.0). Some data I 
 used cannot be provided.
+
+## Extra Thanks to IPUMS
+
+IPUMS took the ACS data, cleaned it, recoded it, extensively documented it, and
+much more. Here is their full citation:
+
+Steven Ruggles, Sarah Flood, Ronald Goeken, Josiah Grover, Erin Meyer, Jose Pacas, and Matthew Sobek. IPUMS USA: Version 8.0 [dataset]. Minneapolis, MN: IPUMS, 2018. https://doi.org/10.18128/D010.V8.0
 
 ## Links
 

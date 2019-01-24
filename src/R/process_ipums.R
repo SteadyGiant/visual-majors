@@ -1,3 +1,5 @@
+cat('\014')
+
 #############
 ### Setup ###
 #############
@@ -35,26 +37,21 @@ acs_2015_2017 = acs_2015_2017 %>%
 # Major categories come from Carnevale et al (2011).
 # https://cew.georgetown.edu/cew-reports/whats-it-worth-the-economic-value-of-college-majors/
 # https://docs.google.com/viewer?url=https%3A%2F%2F1gyhoq479ufd3yna29x7ubjn-wpengine.netdna-ssl.com%2Fwp-content%2Fuploads%2F2014%2F11%2Fwhatsitworth-complete.pdf&pdf=true
-majors =
-  read.csv('./data/base/majors.csv') %>%
+majors = read.csv('./data/base/majors.csv') %>%
   mutate(FOD1P = as.character(FOD1P),
          major = stringr::str_to_title(major))
 
 # Load list of low-wage occupations.
 # From Ben Casselman: https://github.com/fivethirtyeight/data/blob/master/college-majors/college-majors-rscript.R
 # Lines 62-86.
-low_end =
-  read.csv('./data/base/low_end.csv') %>%
+low_end = read.csv('./data/base/low_end.csv') %>%
   mutate(code = as.character(code))
 
 # Load list of jobs that don't require a college degree.
 # As defined by Abel et al (2014): https://goo.gl/mJZuQ7
 # This data is non-public, so it won't be in the below path.
-noncollege =
-  readxl::read_excel(
-    path = './data/base/Everet Rummel_Data Request_Occupation Codes_01-03-2018.xlsx',
-    sheet = 'OCC'
-  ) %>%
+noncollege = readxl::read_excel(path = './data/base/Everet Rummel_Data Request_Occupation Codes_01-03-2018.xlsx',
+                                sheet = 'OCC') %>%
   filter(College == 0) %>%
   mutate(OCC = as.character(OCC))
 
@@ -300,12 +297,6 @@ MAJ_recent_grads_ftyr = recent_grads_ftyr %>%
   ) %>%
   ungroup() %>%
   filter(unwgt_num >= 100)
-
-
-################
-### Validate ###
-################
-
 
 
 ##############

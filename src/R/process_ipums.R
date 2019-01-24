@@ -71,6 +71,8 @@ my_acs = acs_2015_2017 %>%
     # Has a job that doesn't typically require a college degree.
     noncollege = if_else(OCC %in% noncollege$OCC, 1, 0),
     # Works full-time, year-round.
+    # Possibly amend to include workers who report having been working for at
+    # least 1-2 quarters.
     ftyr = if_else(WKSWORK2 == '6'
                    & UHRSWORK >= 35,
                    1, 0)
@@ -198,11 +200,11 @@ MAJ_recent_grads = recent_grads %>%
                            & low_end == 1]),
     num_noncollege = sum(PERWT[EMPSTAT == '1'
                                & noncollege == 1]),
+    epop = num_employed / num,
     lfpr = num_lab_force / num,
     pct_nilf = num_nilf / num,
     urate = num_unemployed / num_lab_force,
     pct_employed = num_employed / num_lab_force,
-    epop = num_employed / num,
     pct_ftyr = num_ftyr / num_employed,
     pct_ft = num_ft / num_employed,
     pct_pt = num_pt / num_employed,

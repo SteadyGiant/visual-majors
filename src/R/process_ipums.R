@@ -311,4 +311,4 @@ write.csv(MAJ_recent_grads_ftyr,
           './data/processed/MAJORS_recent_grads_ftyr.csv')
 
 write.csv(MAJ_recent_grads_ftyr,
-          '../visual-majors-app/data/MAJORS_recent_grads_ftyr.csv')
+          '../visual-majors-app/MAJORS_recent_grads_ftyr.csv')

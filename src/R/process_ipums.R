@@ -127,7 +127,7 @@ sum(my_acs$AGE > 27)                   # Filter out.   x
 # https://docs.google.com/viewer?url=http%3A%2F%2Fftp.iza.org%2Fdp8984.pdf&pdf=true
 sum(my_acs$ftyr == 1
     & my_acs$INCEARN < 12687)           # Filter out.   x
-# [1] 158,648
+# [1] 20,042
 
 
 ##############
@@ -138,7 +138,7 @@ sum(my_acs$ftyr == 1
 #  - Age 22-27, inclusive
 #  - At least a bachelor's degree
 #  - Info on college major reported
-#  - Extra: Reported earnings above "legal threshold" of income
+#  - Extra: Reported past-year earnings at or above legal minimum
 recent_grads = my_acs %>%
   filter(AGE < 28
          & !(ftyr == 1 & INCEARN < 12687))
@@ -176,13 +176,13 @@ MAJ_recent_grads = recent_grads %>%
     num = sum(PERWT),
 
     # Edu info
-    num_grad = sum(PERWT[GRADEATTD == '70']), # Includes working grad students.
+    num_in_grad = sum(PERWT[GRADEATTD == '70']), # Includes working grad students.
     num_went_grad = sum(PERWT[EDUCD %in% c('114', '115', '116')
                               & SCHOOL == '1']),
     num_no_grad = sum(PERWT[!EDUCD %in% c('114', '115', '116')
                             & SCHOOL == '1']),
     pct = num / WGT_TOT_RECENT_GRADS,
-    pct_grad = num_grad / num,
+    pct_in_grad = num_in_grad / num,
     pct_went_grad = num_went_grad / num,
     pct_no_grad = num_no_grad / num,
 
@@ -251,13 +251,13 @@ MAJ_recent_grads_ftyr = recent_grads_ftyr %>%
     num = sum(PERWT),
 
     # Edu info
-    num_grad = sum(PERWT[GRADEATTD == '70']), # Includes working grad students.
+    num_in_grad = sum(PERWT[GRADEATTD == '70']), # Includes working grad students.
     num_went_grad = sum(PERWT[EDUCD %in% c('114', '115', '116')
                               & SCHOOL == '1']),
     num_no_grad = sum(PERWT[!EDUCD %in% c('114', '115', '116')
                             & SCHOOL == '1']),
     pct = num / WGT_TOT_RECENT_GRADS_FTYR,
-    pct_grad = num_grad / num,
+    pct_grad = num_in_grad / num,
     pct_went_grad = num_went_grad / num,
     pct_no_grad = num_no_grad / num,
 
@@ -268,7 +268,6 @@ MAJ_recent_grads_ftyr = recent_grads_ftyr %>%
                                & noncollege == 1]),
     pct_lowend = num_lowend / num,
     pct_noncollege = num_noncollege / num,
-    # Only want earnings for those employed FTYR.
     per25_ftyr_earn = quantile(rep(INCEARN,
                                    times = PERWT),
                                probs = 0.25, na.rm = TRUE),

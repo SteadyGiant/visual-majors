@@ -257,7 +257,7 @@ MAJ_recent_grads_ftyr = recent_grads_ftyr %>%
     num_no_grad = sum(PERWT[!EDUCD %in% c('114', '115', '116')
                             & SCHOOL == '1']),
     pct = num / WGT_TOT_RECENT_GRADS_FTYR,
-    pct_grad = num_in_grad / num,
+    pct_in_grad = num_in_grad / num,
     pct_went_grad = num_went_grad / num,
     pct_no_grad = num_no_grad / num,
 
